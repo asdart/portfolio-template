@@ -39,7 +39,7 @@ const projects = [
 export function ProjectGallery() {
   return (
     <section id="work" className="py-24 px-4 md:px-6 bg-[#0a0a0a] text-white">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="flex justify-between items-center mb-16 border-b border-white/10 pb-6">
           <div className="flex items-baseline gap-2">

@@ -17,7 +17,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-instrument-sans)", "sans-serif"],
-        serif: ["var(--font-playfair)", "serif"],
+        serif: ["CabinetGrotesk-Variable", "CabinetGrotesk-Bold", "sans-serif"],
+        heading: ["CabinetGrotesk-Variable", "CabinetGrotesk-Bold", "sans-serif"],
       },
     },
   },

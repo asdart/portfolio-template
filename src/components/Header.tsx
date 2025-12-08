@@ -3,13 +3,12 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Home, ShoppingBag, PenTool, Mail, User } from "lucide-react";
+import { Menu, X, Home, PenTool, Mail, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "#work", label: "Work", icon: PenTool },
-  { href: "#shop", label: "Shop", icon: ShoppingBag },
   { href: "#blog", label: "Blog", icon: Mail }, // Using Mail as placeholder for Blog/Contact mix
   { href: "#about", label: "About", icon: User },
 ];

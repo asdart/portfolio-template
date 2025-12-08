@@ -25,7 +25,7 @@ const articles = [
 export function BlogSection() {
   return (
     <section id="blog" className="py-32 px-4 md:px-6 bg-[#0a0a0a] text-white">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
          <div className="flex justify-between items-end mb-16 border-b border-white/10 pb-6">
           <h2 className="text-3xl md:text-4xl font-serif">From the blog</h2>
           <Link href="/blog" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors flex items-center gap-2">

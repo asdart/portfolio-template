@@ -6,7 +6,7 @@ import Link from "next/link";
 export function Contact() {
   return (
     <section id="contact" className="py-32 px-4 md:px-6 bg-[#0a0a0a] text-white text-center relative overflow-hidden">
-      <div className="container mx-auto max-w-4xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-12 tracking-tight leading-[1.2] text-neutral-300">
             Let's create something <br/> awesome together.
         </h2>

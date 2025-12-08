@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 export function Pricing() {
   return (
     <section className="py-32 px-4 md:px-6 bg-[#0a0a0a] text-white">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-serif mb-16">Pricing</h2>
         
         <div className="grid md:grid-cols-2 gap-8">
