@@ -1,12 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRef } from "react";
 
 export function Hero() {
+  const containerRef = useRef<HTMLElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+  
+  // Parallax effect: image moves slower than scroll (creates depth)
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   return (
-    <section className="bg-[#0a0a0a] min-h-screen pt-40 pb-0 px-4 md:px-6 relative overflow-hidden flex flex-col items-center">
+    <section ref={containerRef} className="bg-[#0a0a0a] min-h-screen pt-40 pb-0 px-4 md:px-6 relative overflow-hidden flex flex-col items-center">
       {/* Unicorn Studio Background Animation */}
       <div 
         data-us-project="oqgvurDfuceNlEnsXYtL" 
@@ -63,9 +74,14 @@ export function Hero() {
 
         {/* Hero Image */}
         <motion.div
+          ref={imageRef}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ 
+            y,
+            willChange: "transform"
+          }}
           className="relative w-full max-w-md md:max-w-[560px] aspect-[4/5] md:aspect-square"
         >
           <div className="relative w-full h-full rounded-t-[3rem] overflow-hidden">

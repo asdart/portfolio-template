@@ -1,6 +1,6 @@
 "use client";
 
-import { Quote, Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = {
   col1: [
@@ -65,13 +65,6 @@ const testimonials = {
   ],
 };
 
-const avatars = [
-  "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop",
-];
-
 const TestimonialCard = ({ text, name, role, image }: { text: string; name: string; role: string; image: string }) => (
   <article className="rounded-2xl border p-6 border-white/10 bg-neutral-900/70">
     <blockquote className="text-[16px] sm:text-[18px] text-neutral-100">
@@ -99,26 +92,6 @@ export function Testimonials() {
           <h2 className="text-3xl md:text-4xl font-serif max-w-2xl">
             Real stories from teams who transformed their design.
           </h2>
-          
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 border-white/10 bg-white/5 shrink-0 mb-1 md:mb-0">
-            <span className="inline-flex items-center -space-x-2">
-              {avatars.map((avatar, i) => (
-                <img
-                  key={i}
-                  className="h-6 w-6 rounded-full ring-2 object-cover ring-neutral-900"
-                  src={avatar}
-                  alt={`Reviewer ${i + 1}`}
-                />
-              ))}
-            </span>
-            <span className="ml-2 inline-flex items-center gap-1 text-sm text-neutral-300">
-              {[...Array(4)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-amber-300 fill-amber-300" />
-              ))}
-              <Star className="w-4 h-4 text-amber-300 fill-amber-300" style={{ clipPath: "inset(0 50% 0 0)" }} />
-              <span className="ml-1">4.9/5 • 2,431 reviews</span>
-            </span>
-          </div>
         </div>
 
         {/* Testimonials Grid */}
